@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manish Kumar Kashyap – R&D and Product Design, Life Sciences Equipment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#EDF1F3; --paper:#F8FAFB; --ink:#13263A; --muted:#4A5E70; --line:#B9C6D0; --accent:#0B7A93; --accent-soft:#D5EAF0;
+  --head:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0C1822;--paper:#112230;--ink:#E4EDF3;--muted:#9FB3C3;--line:#2B4155;--accent:#5CC8DD;--accent-soft:#16394A;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0C1822;--paper:#112230;--ink:#E4EDF3;--muted:#9FB3C3;--line:#2B4155;--accent:#5CC8DD;--accent-soft:#16394A;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-text-size-adjust:100%}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sheet{max-width:920px;margin:0 auto;padding:20px 16px 56px}
+.frame{background:var(--paper);border:2px solid var(--ink)}
+header{padding:28px 22px 22px}
+h1{font:700 clamp(2.6rem,9vw,4.6rem)/.95 var(--head);margin:0 0 10px;letter-spacing:.01em}
+.role{font:500 clamp(1.15rem,3.6vw,1.5rem)/1.25 var(--head);color:var(--accent);margin:0 0 16px}
+.contact{display:flex;flex-wrap:wrap;gap:6px 22px;margin:0;padding:0;list-style:none;font-size:.95rem;color:var(--muted)}
+.title-block{display:grid;grid-template-columns:repeat(2,1fr);border-top:2px solid var(--ink)}
+.cell{padding:12px 16px;border-bottom:1px solid var(--line)}
+.cell:nth-child(odd){border-right:1px solid var(--line)}
+.cell dt{font-size:.78rem;color:var(--muted);margin:0 0 2px}
+.cell dd{margin:0;font:700 1.7rem/1.1 var(--head)}
+.cell dd small{font:500 .95rem var(--body);color:var(--muted)}
+@media(min-width:700px){
+  .title-block{grid-template-columns:repeat(5,1fr)}
+  .cell{border-bottom:0;border-right:1px solid var(--line)}
+  .cell:nth-child(odd){border-right:1px solid var(--line)}
+  .cell:last-child{border-right:0}
+}
+main{margin-top:20px}
+section{padding:26px 22px;border:1px solid var(--line);background:var(--paper);margin-bottom:14px}
+h2{font:700 1.9rem/1 var(--head);margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid var(--accent)}
+h3{font:700 1.45rem/1.15 var(--head);margin:0}
+p{margin:0 0 12px;max-width:68ch}
+ul{margin:0;padding-left:1.1rem}
+li{margin-bottom:6px;max-width:72ch}
+li::marker{color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.tags li{margin:0;padding:5px 11px;border:1px solid var(--line);background:var(--accent-soft);font-size:.9rem;border-radius:3px}
+.grid{display:grid;gap:0;border:1px solid var(--line)}
+.grid>div{padding:14px 16px;border-bottom:1px solid var(--line)}
+.grid>div:last-child{border-bottom:0}
+.grid h3{font-size:1.25rem;margin-bottom:4px}
+.grid p{margin:0;color:var(--muted);font-size:.95rem}
+@media(min-width:700px){
+  .grid{grid-template-columns:1fr 1fr}
+  .grid>div{border-right:1px solid var(--line)}
+  .grid>div:nth-child(2n){border-right:0}
+  .grid>div:nth-last-child(-n+2):nth-child(odd),.grid>div:last-child{border-bottom:0}
+}
+.job{position:relative;padding-left:22px;border-left:2px solid var(--line);margin-left:6px;padding-bottom:26px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;background:var(--paper);border:2px solid var(--accent);border-radius:50%}
+.job.now::before{background:var(--accent)}
+.when{font-size:.88rem;color:var(--muted);margin:2px 0 10px}
+.company{font-size:1rem;font-weight:600;margin:0}
+.role-line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 12px;margin:14px 0 6px}
+.role-line strong{font-weight:600}
+.role-line span{font-size:.88rem;color:var(--muted)}
+.steps{list-style:none;counter-reset:s;margin:0 0 0 6px;padding:0;border-left:2px solid var(--line)}
+.steps li{counter-increment:s;position:relative;padding:0 0 16px 28px;margin:0}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:counter(s);position:absolute;left:-13px;top:0;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--paper);font:700 .85rem/24px var(--head);text-align:center}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--muted);font-size:.95rem}
+.sk{display:grid;gap:12px}
+.sk div{display:grid;gap:2px}
+.sk b{font-weight:600}
+.sk span{color:var(--muted)}
+@media(min-width:700px){.sk div{grid-template-columns:150px 1fr;gap:16px}}
+.bar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+button{font:500 .85rem var(--body);color:var(--ink);background:var(--paper);border:1px solid var(--line);padding:7px 12px;border-radius:3px;cursor:pointer}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media print{.bar{display:none}body{background:#fff}section,.frame{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="bar"><span>Résumé</span><button type="button" id="print">Print or save as PDF</button></div>
+
+  <div class="frame">
+    <header>
+      <h1>Manish Kumar Kashyap</h1>
+      <p class="role">R&amp;D and product design, life sciences and biomedical equipment</p>
+      <ul class="contact">
+        <li>Lucknow, Uttar Pradesh, India</li>
+        <li><a href="tel:+918840639578">8840639578</a></li>
+        <li><a href="mailto:kmaneesh143@gmail.com">kmaneesh143@gmail.com</a></li>
+      </ul>
+    </header>
+    <dl class="title-block" style="margin:0">
+      <div class="cell"><dt>Experience</dt><dd>13 <small>years</small></dd></div>
+      <div class="cell"><dt>Life sciences equipment</dt><dd>~7 <small>years</small></dd></div>
+      <div class="cell"><dt>Team led</dt><dd>50+ <small>people</small></dd></div>
+      <div class="cell"><dt>Factory capacity</dt><dd>~500 <small>units / year</small></dd></div>
+      <div class="cell"><dt>Patent</dt><dd>1 <small>biosafety cabinet</small></dd></div>
+    </dl>
+  </div>
+
+  <main>
+    <section aria-labelledby="sum">
+      <h2 id="sum">Summary</h2>
+      <p>Mechanical engineer who designs new laboratory equipment and also knows how it is built. My design work combines mechanical systems, electronics and control, and refrigeration, and I have taken products from concept and prototype through to factory production.</p>
+      <p>I developed a biosafety cabinet that was patented in the company’s name, a wide range of lab equipment, and a remote-monitoring solution for -80°C freezers. Since 2025 I run the factory at Mehrotra Biotech, leading 50+ people. The biosafety cabinet and many other products I designed are exported.</p>
+    </section>
+
+    <section aria-labelledby="ach">
+      <h2 id="ach">Key achievements</h2>
+      <ul>
+        <li>Developed a biosafety cabinet that was patented in the company’s name.</li>
+        <li>The biosafety cabinet and many other products I designed are exported.</li>
+        <li>Designed 13 product lines and solutions for life sciences and biomedical labs, from incubators and autoclaves to laminar airflow units and ultra-low-temperature freezers.</li>
+        <li>Built a remote-monitoring solution for -80°C freezer applications.</li>
+        <li>Promoted from Design Engineer to Factory Head in 2025, moving from product R&amp;D to running the whole factory.</li>
+        <li>Lead 50+ employees across a factory with about 500 equipment units of annual capacity.</li>
+        <li>Earlier in my career, contributed to the design of a new manufacturing plant layout and designed material-handling and storage equipment.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="core">
+      <h2 id="core">Core strengths</h2>
+      <ul class="tags">
+        <li>New-product R&amp;D</li><li>Mechanical design</li><li>Electronics and control systems</li><li>Refrigeration and HVAC</li><li>Prototyping and trials</li><li>Production handover</li><li>Sheet-metal manufacturing</li><li>Factory operations</li><li>Technical documentation</li><li>Customer technical support</li><li>Equipment costing</li><li>Marketing material</li><li>Export products</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="port">
+      <h2 id="port">Products I have designed</h2>
+      <div class="grid">
+        <div><h3>Biosafety cabinet</h3><p>Developed and subsequently patented in the company’s name.</p></div>
+        <div><h3>Freezers and refrigerators</h3><p>Dual-door refrigerators, -30°C deep freezers, and remote monitoring for -80°C freezers.</p></div>
+        <div><h3>Airflow systems</h3><p>Ceiling-suspended laminar airflow units and reverse LAF systems.</p></div>
+        <div><h3>Sterilisation and washing</h3><p>Autoclaves and washer disinfectors.</p></div>
+        <div><h3>Incubation and mixing</h3><p>BOD incubators, orbital shakers, refrigerated water baths and ovens.</p></div>
+        <div><h3>Laboratory furniture</h3><p>Furniture and related biomedical and life sciences equipment.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="proc">
+      <h2 id="proc">How I take a product from idea to factory</h2>
+      <ol class="steps">
+        <li><b>Understand the requirement</b><span>Translate customer and application needs into a design brief.</span></li>
+        <li><b>Develop the concept</b><span>Work out the mechanical, electronic/control and refrigeration approach together.</span></li>
+        <li><b>Design in detail</b><span>3D models, assemblies and detailed engineering drawings.</span></li>
+        <li><b>Prototype and trial</b><span>Build prototypes and run product trials.</span></li>
+        <li><b>Test and refine</b><span>Troubleshoot and make design changes until the product performs.</span></li>
+        <li><b>Document</b><span>Specifications, BOMs, quality documentation, operating manuals and installation documents.</span></li>
+        <li><b>Hand over to production</b><span>Manufacturing transfer, with brochures and technical sales material for the sales team.</span></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="ops">
+      <h2 id="ops">Factory operations I lead</h2>
+      <div class="grid">
+        <div><h3>Stores and material readiness</h3><p>Raw-material inspection and readiness before production starts.</p></div>
+        <div><h3>Purchase coordination</h3><p>Aligning procurement with production orders and delivery priorities.</p></div>
+        <div><h3>Production planning</h3><p>Monitoring production orders and in-process progress.</p></div>
+        <div><h3>Manufacturing</h3><p>Sheet-metal fabrication, CNC laser cutting and bending, machining and welding.</p></div>
+        <div><h3>Quality verification</h3><p>Finished-equipment verification and packaging checks.</p></div>
+        <div><h3>Packing and dispatch</h3><p>Delivery coordination with service and sales teams.</p></div>
+        <div><h3>Capacity and machinery</h3><p>Machinery planning, capacity utilisation and process improvement.</p></div>
+        <div><h3>Technical support</h3><p>Complex refrigeration, electronics and customer-service cases, plus sales clarifications.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="sales">
+      <h2 id="sales">Sales, service and marketing support</h2>
+      <div class="grid">
+        <div><h3>Technical support</h3><p>Support the sales team, service team and back office on technical questions.</p></div>
+        <div><h3>Equipment costing</h3><p>Calculate the cost of equipment.</p></div>
+        <div><h3>Marketing material</h3><p>Developed catalogues and promotional material for exhibitions.</p></div>
+        <div><h3>Client visits</h3><p>Visit clients in special cases.</p></div>
+        <div><h3>Exports</h3><p>The biosafety cabinet and many other products I designed are exported.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="exp">
+      <h2 id="exp">Experience</h2>
+
+      <div class="job now">
+        <h3>Mehrotra Biotech Pvt. Ltd.</h3>
+        <p class="when">Lucknow · August 2020 to present</p>
+
+        <div class="role-line"><strong>Factory Head</strong><span>2025 to present</span></div>
+        <ul>
+          <li>Lead end-to-end factory operations: stores, material readiness, purchase coordination, production planning, manufacturing, quality verification, packing and dispatch.</li>
+          <li>Lead 50+ employees, aligning manpower, materials and delivery priorities, in a factory with about 500 equipment units of annual capacity.</li>
+          <li>Monitor production orders, raw-material inspection, in-process progress and finished-equipment checks.</li>
+          <li>Resolve technical and operational bottlenecks across engineering, production, quality, stores, purchase, service and dispatch.</li>
+          <li>Support machinery planning, capacity utilisation and process improvement.</li>
+          <li>Provide technical support on complex refrigeration, electronics and customer-service cases, and support the sales team, service team and back office.</li>
+          <li>Calculate equipment costing, and visit clients in special cases.</li>
+        </ul>
+
+        <div class="role-line"><strong>Design Engineer</strong><span>August 2020 to 2024</span></div>
+        <ul>
+          <li>Led R&amp;D and new-product development for biomedical, laboratory and life sciences equipment, turning customer and application needs into designs.</li>
+          <li>Developed a biosafety cabinet that was subsequently patented in the company’s name.</li>
+          <li>Designed the full range of products listed above, integrating mechanical, electronics/control and refrigeration technology in each.</li>
+          <li>Developed a remote-monitoring solution for -80°C freezers.</li>
+          <li>Prepared 3D models, assemblies, detailed drawings, specifications, BOMs, quality documentation, operating manuals and installation documents.</li>
+          <li>Supported prototypes, product trials, design changes, troubleshooting and manufacturing transfer, and developed catalogues, brochures, exhibition promotional material and technical sales material.</li>
+          <li>Designed products, including the biosafety cabinet, that are now exported.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>U.P. Asbestos Ltd.</h3>
+        <p class="when">Lucknow · September 2018 to July 2020</p>
+        <div class="role-line"><strong>IT Admin and Sales Support (part-time)</strong></div>
+        <ul>
+          <li>Managed website content, including periodic investor updates.</li>
+          <li>Managed IndiaMART, GeM and TradeIndia listings to support lead generation.</li>
+          <li>Prepared brochures, promotional creatives and project presentations.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Chopra Retec Rubber Products Ltd.</h3>
+        <p class="when">Lucknow · July 2014 to March 2018</p>
+        <div class="role-line"><strong>Design Engineer and Quality Control</strong></div>
+        <ul>
+          <li>Designed molded rubber, rubber-to-metal bonded and assembled components for automotive exhaust and suspension.</li>
+          <li>Reverse-engineered, modelled and drafted OEM parts for the aftermarket.</li>
+          <li>Prepared drawings, control plans, PPAP documentation, process-flow diagrams, BOMs, SOPs and work instructions.</li>
+          <li>Worked with the tool room on tooling for complex designs, and supported SPC/MSA documentation.</li>
+          <li>Contributed to a new plant layout using AutoCAD/Revit and Creo Parametric, and designed material-handling and storage equipment.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Carrier Wheels Pvt. Ltd.</h3>
+        <p class="when">Shamli · April 2013 to February 2014</p>
+        <div class="role-line"><strong>Executive Design Engineer</strong></div>
+        <ul>
+          <li>Designed and drafted wheels to applicable standards, and designed tools, dies and fixtures for new designs.</li>
+          <li>Reverse-engineered machine parts and prepared BOMs for press-tool designs.</li>
+          <li>Developed a MIG welding machine assembly for welding the stiffener to the wheel disc.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Technical skills</h2>
+      <div class="sk">
+        <div><b>CAD and design</b><span>Creo Parametric 3.0, AutoCAD, 3D modelling, assemblies, detailed drafting, GD&amp;T</span></div>
+        <div><b>Manufacturing</b><span>CNC laser cutting, CNC sheet-metal bending, lathe machining, welding</span></div>
+        <div><b>Engineering</b><span>Mechanical systems, electronics and control systems, refrigeration and HVAC</span></div>
+        <div><b>Quality</b><span>ISO 13485, ISO 14971 and ISO 9001 principles; PPAP, Control Plans, SPC, MSA, Kaizen, 7 QC Tools</span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="edu">
+      <h2 id="edu">Education</h2>
+      <p style="margin:0"><strong>B.Tech., Mechanical Engineering</strong><br>Uttar Pradesh Technical University, 2009 to 2013 · 71.68%</p>
+    </section>
+  </main>
+</div>
+<script>
+document.getElementById('print').addEventListener('click',function(){window.print()});
+</script>
+</body>
+</html>
